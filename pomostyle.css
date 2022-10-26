@@ -2,3 +2,9 @@ body{
     background: lightblue;
     text-align: center; 
  }
+
+ .btn{
+    top: 20px;
+    width: 50px;
+    color: lightseagreen
+ }
