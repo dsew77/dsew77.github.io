@@ -48,7 +48,9 @@ function updateTime(){
         }
         document.getElementById("min").innerHTML = min;
         document.getElementById('second').innerHTML = second;
-    })
+
+        
+    },1000);
     
     updateMin();
     updateSec();
