@@ -10,5 +10,9 @@ function increaseCount(){
 function resetCount(){
     count = 0
     document.getElementById("count_num").innerHTML = count;
-    
+
+}
+
+function increaseCount2(){
+    setInterval(increaseCount(),1000)
 }
