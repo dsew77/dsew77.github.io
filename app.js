@@ -4,7 +4,7 @@ let count = 0;
 let min = 10;
 let second = 0;
 let intervalId;
-
+let intervalId2;
 
 
 function increaseCount(){
@@ -37,6 +37,19 @@ function updateSec(){
 }
 
 function updateTime(){
+    intervalId2 = setInterval(function(){
+        if(min == 0 && second == 0){
+            clearInterval(intervalId2)
+        } else if (second > 0){
+            second -= 1
+        } else {
+            second = 59
+            min -= 1
+        }
+        document.getElementById("min").innerHTML = min;
+        document.getElementById('second').innerHTML = second;
+    })
+    
     updateMin();
     updateSec();
 }
