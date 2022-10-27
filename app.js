@@ -1,6 +1,7 @@
 'use strict';
 
 let count = 0;
+let intervalId;
 function increaseCount(){
     count += 1;
     document.getElementById("count_num").innerHTML = count;
@@ -14,5 +15,5 @@ function resetCount(){
 }
 
 function increaseCount2(){
-    setInterval(increaseCount(),1000)
+    intervalId = setInterval(increaseCount(),1000);
 }
