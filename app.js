@@ -20,5 +20,5 @@ function increaseCount2(){
         count += 1
         document.getElementById("count_num").innerHTML = count;
     },1000);
-    document.getElementById("blank_text").innerHTML = 'increaseCount2';
+    document.getElementById("blank_text").innerHTML = 'increaseCount2.0';
 }
