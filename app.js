@@ -31,3 +31,12 @@ function increaseCount2(){
 function updateMin(){
     document.getElementById("min").innerHTML = min;
 }
+
+function updateSec(){
+    document.getElementById("second").innerHTML = second;
+}
+
+function updateTime(){
+    updateMin();
+    updateSec();
+}
