@@ -16,6 +16,9 @@ function resetCount(){
 }
 
 function increaseCount2(){
-    intervalId = setInterval(increaseCount(),1000);
+    intervalId = setInterval(function(){
+        count += 1
+        document.getElementById("count_num").innerHTML = count;
+    },1000);
     document.getElementById("blank_text").innerHTML = 'increaseCount2';
 }
