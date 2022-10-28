@@ -33,8 +33,11 @@ function updateMin(){
 }
 
 function updateSec(){
-    
+    if (second < 10){
+        document.getElementById("second").innerHTML = " " + second;
+    } else{
     document.getElementById("second").innerHTML = second;
+    }
 }
 
 function updateTime(){
