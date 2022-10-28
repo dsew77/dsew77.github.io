@@ -53,7 +53,7 @@ function updateTime(){
             second_text = second
         }
         document.getElementById("min").innerHTML = min;
-        document.getElementById('second').innerHTML = second;
+        document.getElementById('second').innerHTML = second_text;
 
 
     },1000);
