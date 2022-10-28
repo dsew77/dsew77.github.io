@@ -33,6 +33,7 @@ function updateMin(){
 }
 
 function updateSec(){
+    
     document.getElementById("second").innerHTML = second;
 }
 
@@ -54,14 +55,13 @@ function updateTime(){
         }
 
         
-        document.getElementById("min").innerHTML = min;
-        document.getElementById('second').innerHTML = second_text;
+        updateMin();
+        updateSec();
 
 
     },1000);
     
-    updateMin();
-    updateSec();
+    
 }
 
 
