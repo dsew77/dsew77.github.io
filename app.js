@@ -1,8 +1,8 @@
 'use strict';
 
 let count = 0;
-let min = 20;
-let second = 30;
+let min = 15;
+let second = 0;
 let intervalId;
 let intervalId2;
 
@@ -39,7 +39,7 @@ function updateSec(){
 function updateTime(){
     intervalId2 = setInterval(function(){
         if(min == 0 && second == 0){
-            document,ent.getElementById('current').innerHTML = 'Ran'
+            documentent.getElementById('current').innerHTML = 'Ran'
             clearInterval(intervalId2)
         } else if (second > 0){
             second -= 1
