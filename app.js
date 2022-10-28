@@ -46,6 +46,12 @@ function updateTime(){
             second = 59
             min -= 1
         }
+
+        if(min<10){
+            second_text = "0" + second
+        } else {
+            second_text = second
+        }
         document.getElementById("min").innerHTML = min;
         document.getElementById('second').innerHTML = second;
 
