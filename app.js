@@ -1,7 +1,7 @@
 'use strict';
 
 let count = 0;
-let min = 10;
+let min = 15;
 let second = 0;
 let intervalId;
 let intervalId2;
@@ -49,9 +49,14 @@ function updateTime(){
         document.getElementById("min").innerHTML = min;
         document.getElementById('second').innerHTML = second;
 
-        
+
     },1000);
     
     updateMin();
     updateSec();
+}
+
+
+function stopTime(){
+    clearInterval(intervalId2)
 }
