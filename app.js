@@ -5,7 +5,7 @@ let min = 15;
 let second = 0;
 let intervalId;
 let intervalId2;
-
+let second_text;
 
 function increaseCount(){
     count += 1;
@@ -49,9 +49,13 @@ function updateTime(){
         }
 
         
+        if (second < 10){
+            second_text = "0" + second
+        }
+
         
         document.getElementById("min").innerHTML = min;
-        document.getElementById('second').innerHTML = second;
+        document.getElementById('second').innerHTML = second_text;
 
 
     },1000);
