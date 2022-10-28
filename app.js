@@ -1,8 +1,8 @@
 'use strict';
 
 let count = 0;
-let min = 15;
-let second = 0;
+let min = 20;
+let second = 30;
 let intervalId;
 let intervalId2;
 
