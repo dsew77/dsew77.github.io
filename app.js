@@ -47,7 +47,7 @@ function updateTime(){
             min -= 1
         }
 
-        if(min<10){
+        if(second<10){
             second_text = "0" + second
         } else {
             second_text = second
