@@ -48,9 +48,10 @@ function updateTime(){
         }
 
         if(second<10){
-            second_text = "0" + second
+            second_text = "0" + second;
+            document.getElementById("current").innerHTML = 'works';
         } else {
-            second_text = second
+            second_text = second;
         }
         document.getElementById("min").innerHTML = min;
         document.getElementById('second').innerHTML = second_text;
