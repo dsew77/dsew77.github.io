@@ -8,3 +8,8 @@ body{
     width: 50px;
     color: lightseagreen
  }
+
+ #Button_Area{
+   border: 2px;
+   border-color: black;
+ }
