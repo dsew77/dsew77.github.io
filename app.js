@@ -71,3 +71,8 @@ function updateTime(){
 function stopTime(){
     clearInterval(intervalId2)
 }
+
+
+function goBack(){
+    window.history.back();
+}
