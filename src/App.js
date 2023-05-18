@@ -22,7 +22,7 @@ function App() {
                   </ul>
               </nav>
 
-              <Routes>
+              <Routes basename = "/your-repo">
                   <Route path="/" element={<Home/>}/>
                   <Route path="/Pomodoro" element={<Pomodoro/>}/>
 
