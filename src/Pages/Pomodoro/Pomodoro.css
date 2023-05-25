@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100%;
 }
 
 #timer{
@@ -11,15 +12,49 @@
     margin-bottom: 50px;
 }
 
-
+#setting_bar{
+    display:flex;
+}
 
 .button_bar{
     display:flex;
     align-items: center;
     justify-content: center;
 
-
 }
+
+.settings {
+    position: absolute;
+    margin-top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 10px;
+    height:400px;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+
+    display:flex;
+    align-items: center;
+
+    flex-direction: column;
+}
+.settings-label {
+    font-size: 20px;
+}
+
+
+.time_input{
+    background-color: lightgray;
+}
+
+
+#settings-title{
+    margin-top: 0px;
+}
+
+
 
 .btn1{
     height:50px;
