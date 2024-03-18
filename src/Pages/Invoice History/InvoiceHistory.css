@@ -1,0 +1,44 @@
+#Container{
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-color: red;
+    height:80%;
+    background-color: lightgray;
+    align-items: flex-start;
+}
+
+#TopBar{
+    display: flex;
+    height: 20%;
+    background-color: lightcoral;
+    width: 100%;
+}
+
+#Main_area{
+    display:flex;
+    margin-top :0;
+    height: 60%;
+    background-color: blanchedalmond;
+    width:100%;
+    flex-direction: column;
+}
+
+.ItemM{
+    background-color: goldenrod;
+    width: 800px;
+
+}
+
+#postgres{
+    height: 50%;
+    background-color: white;
+    width: 100%;
+}
+
+
+#table1{
+    height: 300px;
+    overflow: auto;
+
+}

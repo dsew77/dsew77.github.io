@@ -10,7 +10,11 @@ function Pomodoro(){
     const [isRunning, setIsRunning] = useState(false);
     const [startBtnTxt, setStartBtnTxt] = useState("Start");
     const [mode, setMode] = useState('pomodoro');
-    const [isSettingsVisible, setIsSettingsVisible] = useState(false)
+    const [isSettingsVisible, setIsSettingsVisible] = useState(false);
+
+    const [pomodoroTimer, setPomodoroTimer] = useState(900);
+    const [sBreakTimer, setSBreakTimer] = useState(300);
+    const [lBreakTimer, setLBreakTimer] = useState(900);
 
     const modeColors = {
         pomodoro: '#DB6852',
@@ -28,8 +32,8 @@ function Pomodoro(){
 
 
     const timerDuration = {
-        pomodoro: 900,
-        shortBreak: 300,
+        pomodoro: pomodoroTimer,
+        shortBreak: sBreakTimer,
         longBreak: 900,
     };
 
@@ -115,12 +119,33 @@ function Pomodoro(){
                         <input class = "time_input"
                             type="number"
                             min="1"
-                            max="120"
+                            max="10000"
                             className="settings-input"
-                            //value={pomodoroDuration}
-                            //onChange={(e) => setPomodoroDuration(parseInt(e.target.value))}
+                               step = {60}
+                            value={pomodoroTimer}
+                            onChange={(e) => setPomodoroTimer(parseInt(e.target.value))}
                         />
-                        <span> minutes</span>
+                        <span> Short Break Duration: </span>
+                        <input className="time_input"
+                               type="number"
+                               min="1"
+                               max="10000"
+                               step = {60}
+                               className="settings-input"
+                               value={sBreakTimer}
+                               onChange={(e) => setSBreakTimer(parseInt(e.target.value))}
+                        />
+                        <span>Long Break Duration: </span>
+                        <input className="time_input"
+                               type="number"
+                               min="1"
+                               max="10000"
+                               className="settings-input"
+                               step = {60}
+                               value={lBreakTimer}
+                               onChange={(e) => setLBreakTimer(parseInt(e.target.value))}
+                        />
+
                     </div>
 
 

@@ -3,7 +3,9 @@ import './App.css';
 import React from 'react';
 import Home from './Home'
 import Pomodoro from "./Pages/Pomodoro/Pomodoro";
-import ComponentPreview from "./Pages/Component Preview/ComponentPreview"
+import ComponentPreview from "./Pages/Component Preview/ComponentPreview";
+import InvoiceHistory from "./Pages/Invoice History/InvoiceHistory";
+import GoodRead from "./Pages/Book/GoodRead";
 
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 
@@ -23,15 +25,24 @@ function App() {
                       <li>
                         <Link to ="/ComponentPreview">ComponentPreview</Link>
                       </li>
+                      <li>
+                          <Link to = "/Invoice History">Invoice History</Link>
+                      </li>
+                      <li>
+                          <Link to = "/ReadingData">Books Explore</Link>
+                      </li>
 
                   </ul>
               </nav>
-
-              <Routes basename = "/your-repo">
-                  <Route path="/" element={<Home/>}/>
-                  <Route path="/Pomodoro" element={<Pomodoro/>}/>
-                  <Route path="/ComponentPreview" element={<ComponentPreview/>}/>
-              </Routes>
+              <div id = 'ContainerMain'>
+                 <Routes basename = "/your-repo">
+                    <Route path="/" element={<Home/>}/>
+                    <Route path="/Pomodoro" element={<Pomodoro/>}/>
+                    <Route path="/ComponentPreview" element={<ComponentPreview/>}/>
+                    <Route path ="/Invoice History" element = {<InvoiceHistory/>}/>
+                     <Route path="/ReadingData" element = {<GoodRead/>}/>
+                 </Routes>
+              </div>
           </div>
       </Router>
   );

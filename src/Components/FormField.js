@@ -6,18 +6,18 @@ import TiqAutoComplete from "./TiqAutoComplete";
 import {TextField} from "@mui/material";
 
 export default function FormField(props){
-    const {icon1, icon2} = props;
+    const {icon1, icon2, onIconClick} = props;
 
     //Styling the container
     const containerStyle = {
         display: 'flex',
         alignItems: 'center',
-        border: '1px solid red',
+        border: '1px solid black',
         borderRadius: '4px',
         width: 'fit-content',
         margin: '8px 0',
-        height: '100%'
-
+        height: '100%',
+        backgroundColor: 'lightgrey'
 
     }
     const iconStyleL ={
@@ -34,7 +34,8 @@ export default function FormField(props){
         padding:'2px',
         marginRight: '8px',
         marginLeft: '8px',
-        borderLeft: '1px solid blue'
+        visibility:'visible'
+
     }
 
     const inputStyle = {
@@ -48,7 +49,9 @@ export default function FormField(props){
         height: '60px',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+
+        overflow: "hidden"
     }
 
     const iconContainerStyleR = {
@@ -56,9 +59,23 @@ export default function FormField(props){
         height: '60px',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor:'lightblue',
+        borderTopRightRadius: '3px',
+        borderBottomRightRadius: '3px',
+
     }
 
+    const textFieldStyle = {
+        backgroundColor: 'white', // Specify the desired background color here
+        height: '60px'
+    };
+
+    const handleIconClick = () =>{
+        if(onIconClick){
+            onIconClick();
+        }
+    }
 
 
     return(
@@ -71,15 +88,18 @@ export default function FormField(props){
                        variant = 'standard'
                        InputProps={{
                            disableUnderline: true,
+                           style: textFieldStyle,
                        }}
                 type = "text"
                 value = {props.value}
                 onChange = {props.onChange}
                 className ="input-field"
-
+                onKeyDown = {props.onKeyDown}
             />
             <div style = {iconContainerStyleR}>
-                <FontAwesomeIcon style = {iconStyleR} icon={icon2} className ="icon"/>
+                <button onClick = {handleIconClick} style = {{visibility:'hidden', cursor: 'pointer'}}>
+                    <FontAwesomeIcon style = {iconStyleR} icon={icon2} className ="icon"/>
+                </button>
             </div>
         </div>
     );
